@@ -1,0 +1,293 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    background-image: linear-gradient(180deg, rgba(237, 164, 24, 1), rgba(237, 164, 24, 0));
+}
+
+.top-side-con{
+    display: flex;
+}
+
+.burger{
+    margin: 42px 30px 0 20px;
+    display: none;
+    position: relative;
+}
+
+.vf{
+    font-size: 30px;
+    font-weight: 500;
+    background-color: rgba(49, 38, 38, 1);
+    color: white;
+    padding: 8px 6px;
+    border-radius: 10px;
+    margin-top: 35px;
+    margin-left: 160px;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+.vintage-food{
+    flex: 1;
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 47px;
+    margin-left: 13px;
+    text-wrap: nowrap;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.language{
+    height: 20px;
+    width: 30px;
+    margin: 52px 0px 0 30px;
+}
+
+.main-button{
+    flex: 1;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 47px 0 0 150px;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+.stock,
+.about,
+.language-button{
+    flex: 1;
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 117px;
+    text-wrap: nowrap;
+    margin-bottom: 0;
+    margin: 47px 0 0 140px;
+    cursor: pointer;
+    color: black;
+}
+
+.bascket{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(49, 38, 38, 1);
+    cursor: pointer;  
+    margin: 31px 100px 0 140px;
+    cursor: pointer;
+}
+
+
+.burger-menu{
+    flex: 1;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.burger-menu::before,
+.burger-menu::after,
+.burger-menu span{
+    height: 4px;
+    border-radius: 40px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    transition: 0.3s;
+}
+
+.burger-menu::before{
+    content: '';
+    top: 0;
+}
+
+.burger-menu::after{
+    content: '';
+    bottom: 0;
+}
+
+#burger-toggle{
+    display: none;
+}
+
+#burger-toggle:checked ~ label::after{
+    transform: rotate(45deg);
+    bottom: 24px;
+}
+
+#burger-toggle:checked ~ label::before{
+    transform: rotate(-45deg);
+    top: 12px;
+}
+
+#burger-toggle:checked ~ label span{
+    transform: rotate(-45deg);
+    top: 12px;
+}
+
+#burger-toggle:checked ~ ul{
+    display: flex;
+    background-color: rgba(229, 38, 38, 0.829);
+}
+
+
+ul{
+    position: absolute;
+    list-style: none;
+    background-color: rgb(229, 38, 38);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    right: 0px;
+    top: 70px;
+    transition: 1s;
+    text-align: center;
+    border-radius: 6px;
+    display: none;
+}
+
+li{
+    font-size: 24px;
+    text-wrap: nowrap;
+    font-weight: 500;
+    margin: 10px 37px 10px 0;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+li:hover{
+    background-color: black;
+}
+
+li:active{
+    background-color: rgb(0, 0, 0);
+}
+
+.bottom-side-con{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    margin-left: 160px;
+    transition: 0.5s;
+}
+
+.order-text{
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 190px;
+    text-wrap: nowrap;
+    transition: 0.5s;
+}
+
+.discount-text{
+    font-size: 16px;
+    margin-top: 30px;
+    text-wrap: nowrap;
+}
+
+.order-button{
+    font-size: 24px;
+    color: white;
+    background-color: rgba(229, 38, 38, 1);
+    height: 60px;
+    width: 142px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 30px;
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+.order-button:hover{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.281);
+}
+
+.order-button:active{
+    background-color: black;
+}
+
+.burger-pic{
+    width: 100%;
+    max-width: 600px;
+    transition: 0.5s;
+}
+
+
+
+@media screen and (max-width: 900px){
+    .burger-pic{
+        margin-top:0px;
+    }
+    .order-text{
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .burger-pic{
+        margin-top: 70px;
+    }
+    .order-text{
+        margin-top: 70px;
+    }
+    
+    .vintage-food{
+        font-size: 15px;
+    }
+    
+    .vf{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .order-text{
+        text-wrap: wrap;
+    }
+
+    .discount-text{
+        text-wrap: wrap;
+    }
+
+}
+
+
+@media screen and (max-width: 1300px){
+    .left-side,
+    .vf{
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 1650px){
+    .left-side,
+    .vf{
+        margin-left: 30px;
+    }
+
+    .burger{
+        display: flex;
+    }
+
+    .main-button,
+    .stock,
+    .about,
+    .bascket,
+    .language-button{
+        display: none;
+    }
+}
+
